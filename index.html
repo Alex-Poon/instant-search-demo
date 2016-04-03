@@ -3,8 +3,8 @@
 <head>
   <title>Instant Search Tutorial</title>
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.ion.rangeslider/2.0.12/css/ion.rangeSlider.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.ion.rangeslider/2.0.12/css/ion.rangeSlider.skinFlat.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.ion.rangeslider/2.0.12/css/ion.rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.ion.rangeslider/2.0.12/css/ion.rangeSlider.skinFlat.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!-- /CSS -->
 </head>
@@ -59,12 +59,12 @@
     {{#hits}}
     <div class="hit">
       <div class="hit-image">
-        <img src="{{ image }}" alt="{{ name }}">
+        <img src="{{ profile_picture }}" alt="{{ profile_picture }}">
       </div>
       <div class="hit-content">
-        <h3 class="hit-price">${{ price }}</h3>
+        <h3 class="hit-price">{{ engineerrank_percentile }}</h3>
         <h2 class="hit-name">{{{ _highlightResult.name.value }}}</h2>
-        <p class="hit-description">{{{ _highlightResult.description.value }}}</p>
+        <p class="hit-description"><div>{{classification}}<br />>{{ schools }}</div><div>{{ companies }}</div><div>{{{ _highlightResult.description.value }}}</div></p>
       </div>
     </div>
     {{/hits}}
@@ -129,11 +129,11 @@
 
 
   <!-- Javascript -->
-  <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-  <script src="//cdn.jsdelivr.net/algoliasearch.helper/2/algoliasearch.helper.min.js"></script>
-  <script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.common.js"></script>
-  <script src="//cdn.jsdelivr.net/jquery.ion.rangeslider/2.0.12/js/ion.rangeSlider.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/algoliasearch.helper/2/algoliasearch.helper.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.common.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.ion.rangeslider/2.0.12/js/ion.rangeSlider.min.js"></script>
   <script src="js/app.js"></script>
   <!-- /Javascript -->
 

@@ -6,18 +6,18 @@ $(document).ready(function() {
   // ==============
 
   // Replace with your own values
-  var APPLICATION_ID = 'latency';
-  var SEARCH_ONLY_API_KEY = '6be0576ff61c053d5f9a3225e2a90f76';
-  var INDEX_NAME = 'instant_search';
+  var APPLICATION_ID = '98SAHNRE8Y';
+  var SEARCH_ONLY_API_KEY = '1a963f40dcd174f37febe3e188e27299';
+  var INDEX_NAME = 'LinkedinUser';
   var PARAMS = {
     hitsPerPage: 10,
     maxValuesPerFacet: 8,
     facets: ['type'],
-    disjunctiveFacets: ['categories', 'brand', 'price']
+    disjunctiveFacets: ['classification', 'current_company', 'industry', 'skills']
   };
-  var FACETS_SLIDER = ['price'];
-  var FACETS_ORDER_OF_DISPLAY = ['categories', 'brand', 'price', 'type'];
-  var FACETS_LABELS = {categories: 'Category', brand: 'Brand', price: 'Price', type: 'Type'};
+  var FACETS_SLIDER = ['engineerrank_percentile'];
+  var FACETS_ORDER_OF_DISPLAY = ['engineerrank_percentile', 'classification', 'current_company', 'industry', 'skills'];
+  var FACETS_LABELS = {classification: 'Classification', current_company: 'Current Company', industry: 'Industry', engineerrank_percentile: 'Rank'};
 
   // Client + Helper initialization
   var algolia = algoliasearch(APPLICATION_ID, SEARCH_ONLY_API_KEY);
