@@ -12,12 +12,12 @@ $(document).ready(function() {
   var PARAMS = {
     hitsPerPage: 10,
     maxValuesPerFacet: 8,
-    facets: ['type'],
-    disjunctiveFacets: ['classification', 'current_company', 'industry', 'skills']
+    facets: ['classification'],
+    disjunctiveFacets: ['current_company', 'industry', 'skills']
   };
   var FACETS_SLIDER = ['engineerrank_percentile'];
-  var FACETS_ORDER_OF_DISPLAY = ['engineerrank_percentile', 'classification', 'current_company', 'industry', 'skills'];
-  var FACETS_LABELS = {classification: 'Classification', current_company: 'Current Company', industry: 'Industry', engineerrank_percentile: 'Rank'};
+  var FACETS_ORDER_OF_DISPLAY = ['classification', 'current_company', 'industry', 'skills', 'engineerrank_percentile'];
+  var FACETS_LABELS = {classification: 'Classification', current_company: 'Current Company', industry: 'Industry', engineerrank_percentile: 'Rank', skills: 'Skills'};
 
   // Client + Helper initialization
   var algolia = algoliasearch(APPLICATION_ID, SEARCH_ONLY_API_KEY);
@@ -103,6 +103,8 @@ $(document).ready(function() {
     for (var facetIndex = 0; facetIndex < FACETS_ORDER_OF_DISPLAY.length; ++facetIndex) {
       var facetName = FACETS_ORDER_OF_DISPLAY[facetIndex];
       var facetResult = content.getFacetByName(facetName);
+      console.log(facetResult);
+      console.log(content.disjunctiveFacets);
       if (!facetResult) continue;
       var facetContent = {};
 
